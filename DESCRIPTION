@@ -4,7 +4,16 @@ Title: Individualized Multi-Omic Pathway Deviation Scores Using Multiple Factor 
 Version: 0.1.0
 Author: Andrea Rau 
 Maintainer: Andrea Rau <andrea.rau@inra.fr>
-Description: Use multiple factor analysis to calculate individualized pathway-centric scores of deviation with respect to the sampled population based on multi-omic assays (e.g., RNA-seq, copy number alterations, methylation, etc). Graphical and numerical outputs are provided to identify highly aberrant individuals for a particular pathway of interest, as well as the gene and omics drivers of aberrant multi-omic profiles.
+Depends: R (>= 3.5.1)
+Imports: tidyr, dplyr, KEGGREST, missMDA, FactoMineR, ggplot2, ggrepel, viridis, cowplot
+Suggests: testthat
+Description: Use multiple factor analysis to calculate individualized pathway-centric 
+        scores of deviation with respect to the sampled population based on multi-omic 
+        assays (e.g., RNA-seq, copy number alterations, methylation, etc). Graphical 
+        and numerical outputs are provided to identify highly aberrant individuals 
+        for a particular pathway of interest, as well as the gene and omics drivers of 
+        aberrant multi-omic profiles.
 License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.1.1

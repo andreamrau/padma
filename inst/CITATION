@@ -1,0 +1,16 @@
+citHeader("To cite the R package 'padma' in publications use:")  
+
+citEntry(entry   = "article",
+         title   = "Individualized multi-omic pathway deviation scores using multiple factor analysis",
+		 journal = "bioRxiv",
+         volume  = "doi: https://doi.org/10.1101/827022",
+         year    = "2019",
+         author  = personList(
+           person(given="Andrea", family="Rau"),
+		   person(given="Regina", family="Manansala"),
+		   person(given="Michael J.", family="Flister"),
+		   person(given="Hallgeir", family="Rui"),
+		   person(given="Florence", family="Jaffrezic"),
+		   person(given="Denis", family="Laloe"),
+		   person(given="Paul L.", family="Auer")),
+textVersion = "Rau et al. (2019) Individualized multi-omic pathway deviation scores using multiple factor analysis. bioRxiv, doi: https://doi.org/10.1101/827022.")
