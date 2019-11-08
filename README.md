@@ -1,6 +1,6 @@
 # padma: Individualized multi-omic pathway deviation scores using multiple factor analysis
 
-<img src="hex_padma_v2.png" align="right" width="200" />
+<img src="inst/logos/hex_padma_v2.png" align="right" width="200" />
 
 
 The *padma* package can be installed as follows:

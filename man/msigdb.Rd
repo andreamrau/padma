@@ -11,7 +11,7 @@ pathway names (e.g., \code{"c2_cp_BIOCARTA_41BB_PATHWAY"}) and
 list of gene symbols.}
 \source{
 \href{http://software.broadinstitute.org/gsea/msigdb/genesets.jsp?collection=CP}{MSigDB Gene sets}
-\href{http://bioinf.wehi.edu.au/software/MSigDB/}
+\url{http://bioinf.wehi.edu.au/software/MSigDB/}
 }
 \usage{
 data(msigdb)
@@ -32,6 +32,6 @@ head(msigdb)
 }
 \references{
 Liberzon et al. (2011) Bioinformatics 27:12, 1739-1740.
-\href{https://doi.org/10.1093/bioinformatics/btr260}.
+\url{https://doi.org/10.1093/bioinformatics/btr260}.
 }
 \keyword{datasets}

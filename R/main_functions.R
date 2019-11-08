@@ -4,6 +4,7 @@
 ## - Generalize to non-TCGA sample IDs
 ## - Detail padma output
 ## - Write vignette
+## - Fix "no visible binding for global variable" errors due to tidyverse
 
 #-----------------------------------------------------------------------
 #' Calculate individualized deviation scores from multi-omic data
@@ -42,7 +43,7 @@
 #' should provide the symbol of a predicted gene target for the corresponding miRNA.
 #' Each predicted miRNA-target pair should have its own row in the
 #' data.frame. By default, the miRNA-gene interactions of type "Functional MTI" from miRTarBase
-#' are used (see the preloaded \code{"mirtarbase} data in the package).
+#' are used (see the preloaded \code{"mirtarbase"} data in the package).
 #' @param full_results If \code{TRUE} (default), include full MFA results in function output;
 #' otherwise, provide concise output to save space.
 #'
@@ -53,6 +54,8 @@
 #' @importFrom KEGGREST keggGet
 #' @importFrom missMDA imputeMFA
 #' @importFrom FactoMineR MFA
+#' @importFrom stats quantile var weighted.mean
+#' @importFrom utils data tail
 #' @example /inst/examples/padma-package.R
 padma <- function(omics_data,
                   base_ids = NULL,
@@ -64,9 +67,9 @@ padma <- function(omics_data,
                   full_results = TRUE) {
 
   ## Add MSigDB data that are preloaded in the package as misgdb
-  MSigDB <- msigdb
+  MSigDB <- padma::msigdb
   ## Add miRTarBase mirna_targets preloaded as mirtarbase if mirna_targets not provided
-  miRTarBase <- mirtarbase
+  miRTarBase <- padma::mirtarbase
   if(!is.null(mirna_targets)) {
     miRTarBase <- mirna_targets
   }

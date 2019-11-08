@@ -50,7 +50,7 @@ should provide a miRNA name (e.g., \code{"hsa-miR-20a-5p"}) and column \code{"Ta
 should provide the symbol of a predicted gene target for the corresponding miRNA.
 Each predicted miRNA-target pair should have its own row in the
 data.frame. By default, the miRNA-gene interactions of type "Functional MTI" from miRTarBase
-are used (see the preloaded \code{"mirtarbase} data in the package).}
+are used (see the preloaded \code{"mirtarbase"} data in the package).}
 
 \item{full_results}{If \code{TRUE} (default), include full MFA results in function output;
 otherwise, provide concise output to save space.}
@@ -66,8 +66,15 @@ Calculate individualized deviation scores from multi-omic data
 run_padma <- padma(LUAD_subset,
                    pathway_name = "c2_cp_BIOCARTA_D4GDI_PATHWAY")
 
-plot_factor_map(run_padma, dim_x = 1, dim_y = 2)
-plot_partial_factor_map(run_padma, dim_x = 1, dim_y = 2)
-plot_partial_factor_map(run_padma, id = "TCGA-78-7536", dim_x = 1, dim_y = 2)
+plot_factor_map(run_padma,
+                dim_x = 1,
+                dim_y = 2)
+plot_partial_factor_map(run_padma,
+                        dim_x = 1,
+                        dim_y = 2)
+plot_partial_factor_map(run_padma,
+                        id = "TCGA-78-7536",
+                        dim_x = 1,
+                        dim_y = 2)
 plot_omics_contrib(run_padma, max_dim = 10)
 }

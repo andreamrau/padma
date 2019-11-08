@@ -10,7 +10,7 @@ columns: \code{miRNA}, which provides the miRNA identifier
 \code{Target Gene}, which provides the corresponding
 predicted gene target.}
 \source{
-\href{http://mirtarbase.mbc.nctu.edu.tw/php/index.php}
+\url{http://mirtarbase.mbc.nctu.edu.tw/php/index.php}
 }
 \usage{
 data(mirtarbase)
@@ -26,6 +26,6 @@ head(mirtarbase)
 }
 \references{
 Chou et al. (2018) Nucleic Acids Research 46, D296–D302.
-\href{https://doi.org/10.1093/nar/gkx1067}.
+\url{https://doi.org/10.1093/nar/gkx1067}.
 }
 \keyword{datasets}

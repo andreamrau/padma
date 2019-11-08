@@ -23,12 +23,12 @@
 #'
 #' @references
 #' Liberzon et al. (2011) Bioinformatics 27:12, 1739-1740.
-#' \href{https://doi.org/10.1093/bioinformatics/btr260}.
+#' \url{https://doi.org/10.1093/bioinformatics/btr260}.
 #'
 #'
 #' @source
 #' \href{http://software.broadinstitute.org/gsea/msigdb/genesets.jsp?collection=CP}{MSigDB Gene sets}
-#' \href{http://bioinf.wehi.edu.au/software/MSigDB/}
+#' \url{http://bioinf.wehi.edu.au/software/MSigDB/}
 #'
 #' @examples
 #' data(msigdb)
@@ -56,10 +56,10 @@
 #'
 #' @references
 #' Chou et al. (2018) Nucleic Acids Research 46, D296–D302.
-#' \href{https://doi.org/10.1093/nar/gkx1067}.
+#' \url{https://doi.org/10.1093/nar/gkx1067}.
 #'
 #' @source
-#' \href{http://mirtarbase.mbc.nctu.edu.tw/php/index.php}
+#' \url{http://mirtarbase.mbc.nctu.edu.tw/php/index.php}
 #'
 #' @examples
 #' data(mirtarbase)
@@ -97,9 +97,9 @@
 #'
 #' @references
 #' The Cancer Genome Atlas Research Network (2014) Nature 511, 543-550.
-#' \href{https://doi.org/10.1038/nature13385}.
+#' \url{https://doi.org/10.1038/nature13385}.
 #'
-#' Rau et al. (2019) bioRxiv, \href{https://doi.org/10.1101/827022}.
+#' Rau et al. (2019) bioRxiv, \url{https://doi.org/10.1101/827022}.
 #'
 #'
 #' @source
