@@ -2,6 +2,7 @@
 
 <img src="inst/logos/hex_padma_v2.png" align="right" width="200" />
 
+[![DOI](https://zenodo.org/badge/177859198.svg)](https://zenodo.org/badge/latestdoi/177859198)
 
 The *padma* package can be installed as follows:
 
