@@ -1,12 +1,12 @@
 Package: padma
 Type: Package
 Title: Individualized Multi-Omic Pathway Deviation Scores Using Multiple Factor Analysis
-Version: 0.1.0
+Version: 0.1.1
 Author: Andrea Rau 
 Maintainer: Andrea Rau <andrea.rau@inra.fr>
 Depends: R (>= 3.5.0)
 Imports: tidyr, dplyr, KEGGREST, missMDA, FactoMineR, ggplot2, ggrepel, viridis, cowplot
-Suggests: testthat
+Suggests: testthat, BiocStyle, knitr, rmarkdown
 Description: Use multiple factor analysis to calculate individualized pathway-centric 
         scores of deviation with respect to the sampled population based on multi-omic 
         assays (e.g., RNA-seq, copy number alterations, methylation, etc). Graphical 
@@ -17,3 +17,4 @@ License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
+VignetteBuilder: knitr

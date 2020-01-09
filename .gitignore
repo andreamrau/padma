@@ -39,3 +39,5 @@ dev.R
 .Rbuildignore
 
 *.Rproj
+# doc
+Meta

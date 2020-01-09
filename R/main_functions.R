@@ -2,8 +2,6 @@
 ## TODO:
 ## - Generalize to arbitrary names of list
 ## - Generalize to non-TCGA sample IDs
-## - Detail padma output
-## - Write vignette
 ## - Fix "no visible binding for global variable" errors due to tidyverse
 
 #-----------------------------------------------------------------------
