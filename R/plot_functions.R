@@ -195,7 +195,7 @@ plot_omics_contrib <- function(padma_obj,
   df$omics <- rownames(df)
   df <- df %>%
     gather(value = percent, key = dimension, -omics) %>%
-    separate(dimension, into = c("var", "dimension"), split = ".") %>%
+    separate(dimension, into = c("var", "dimension")) %>%
     dplyr::select(-var) %>%
     mutate(dimension = as.numeric(dimension))
   df$dimension <- ifelse(df$dimension == 0, -5, df$dimension)
