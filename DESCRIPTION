@@ -1,11 +1,11 @@
 Package: padma
 Type: Package
 Title: Individualized Multi-Omic Pathway Deviation Scores Using Multiple Factor Analysis
-Version: 0.99.0
+Version: 0.99.1
 Authors@R: c(
   person(given="Andrea", 
          family="Rau", 
-         email="andrea.rau@inrae.fr", 
+         email="andrea.rau@inra.fr", 
          role=c("cre", "aut"), 
          comment = c(ORCID = "0000-0001-6469-488X")))
 Depends: 
