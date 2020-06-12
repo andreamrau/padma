@@ -1,3 +1,7 @@
-	padma VERSION 0.1.x
-
--- Initial development version of padma
+Changes in version 0.99.x (2018-05-15)
++ Substantial changes to prepare for Bioconductor submission
+  o added S4 classes / methods / generics
+  o integration with MultiAssayExperiment
+  
+Changes in version 0.1.x (2020-01-09)
++ Initial development version
