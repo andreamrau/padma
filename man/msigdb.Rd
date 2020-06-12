@@ -4,11 +4,13 @@
 \name{msigdb}
 \alias{msigdb}
 \title{MSigDB canonical pathways and corresponding gene lists}
-\format{An object of class \code{data.frame} with two
+\format{
+An object of class \code{data.frame} with two
 columns: \code{geneset}, which provides the 1322 MSigDB curated
-pathway names (e.g., \code{"c2_cp_BIOCARTA_41BB_PATHWAY"}) and
+pathway names (e.g., \code{'c2_cp_BIOCARTA_41BB_PATHWAY'}) and
 \code{symbol}, which provides the comma-separated corresponding
-list of gene symbols.}
+list of gene symbols.
+}
 \source{
 \href{http://software.broadinstitute.org/gsea/msigdb/genesets.jsp?collection=CP}{MSigDB Gene sets}
 \url{http://bioinf.wehi.edu.au/software/MSigDB/}
@@ -17,11 +19,11 @@ list of gene symbols.}
 data(msigdb)
 }
 \description{
-List of 1322 pathways and corresponding gene symbols included in the
+Data.frame of 1322 pathways and corresponding gene symbols included in the
 MSigDB canonical pathways curated gene set catalog, which
 includes genes whose products are involved in metabolic and
 signaling pathways reported in curated public databases. This
-specifically corresponds to the "C2 curated gene sets" catalog
+specifically corresponds to the 'C2 curated gene sets' catalog
 from MSigDB v5.2 available at
 http://bioinf.wehi.edu.au/software/MSigDB/ as described in the
 limma Bioconductor package.

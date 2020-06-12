@@ -1,20 +1,55 @@
 Package: padma
 Type: Package
 Title: Individualized Multi-Omic Pathway Deviation Scores Using Multiple Factor Analysis
-Version: 0.1.1
-Author: Andrea Rau 
-Maintainer: Andrea Rau <andrea.rau@inra.fr>
-Depends: R (>= 3.5.0)
-Imports: tidyr, dplyr, KEGGREST, missMDA, FactoMineR, ggplot2, ggrepel, viridis, cowplot
-Suggests: testthat, BiocStyle, knitr, rmarkdown
-Description: Use multiple factor analysis to calculate individualized pathway-centric 
-        scores of deviation with respect to the sampled population based on multi-omic 
-        assays (e.g., RNA-seq, copy number alterations, methylation, etc). Graphical 
-        and numerical outputs are provided to identify highly aberrant individuals 
-        for a particular pathway of interest, as well as the gene and omics drivers of 
-        aberrant multi-omic profiles.
+Version: 0.99.0
+Authors@R: c(
+  person(given="Andrea", 
+         family="Rau", 
+         email="andrea.rau@inrae.fr", 
+         role=c("cre", "aut"), 
+         comment = c(ORCID = "0000-0001-6469-488X")))
+Depends: 
+  R (>= 4.0.0), 
+  SummarizedExperiment, 
+  S4Vectors
+Imports: 
+  FactoMineR, 
+  MultiAssayExperiment,
+  methods,
+  graphics,
+  stats,
+  utils
+Suggests:
+  testthat, 
+  BiocStyle, 
+  knitr, 
+  rmarkdown, 
+  KEGGREST, 
+  missMDA, 
+  ggplot2, 
+  ggrepel, 
+  car, 
+  cowplot
+Description: 
+  Use multiple factor analysis to calculate individualized pathway-centric 
+  scores of deviation with respect to the sampled population based on multi-omic 
+  assays (e.g., RNA-seq, copy number alterations, methylation, etc). Graphical 
+  and numerical outputs are provided to identify highly aberrant individuals 
+  for a particular pathway of interest, as well as the gene and omics drivers of 
+  aberrant multi-omic profiles.
 License: GPL (>=3)
+URL: https://github.com/andreamrau/padma
+https://github.com/andreamrau/padma/issues
+biocViews: 
+  Software,
+  StatisticalMethod,
+  PrincipalComponent,
+  GeneExpression,
+  Pathways,
+  RNASeq,
+  BioCarta,
+  MethylSeq
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr

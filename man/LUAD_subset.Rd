@@ -4,21 +4,16 @@
 \name{LUAD_subset}
 \alias{LUAD_subset}
 \title{Subset of batch-corrected multi-omic TCGA data in lung adenocarcinoma}
-\format{A named list of five objects of class \code{data.frame}
+\format{
+A named list of five objects of class \code{data.frame}
 containing a subset of the batch-corrected multi-omic TCGA
 data from lung adenocarcinoma, corresponding to the 13 genes
 in the D4 GDI signaling pathway:
-\code{"clinical"} is of dimension 144 x 55 and contains clinical
-variables for the 144 individuals. \code{"rnaseq"}, \code{"methyl"},
-and \code{"cna"} are of dimension 13 (genes) x 145, where the
-first column \code{"gene"} contains the gene symbol and the
-remaining 144 columns correspond to the TCGA individuals.
-\code{"mirna"} is of dimension 1 x 146 for the single miRNA
-predicted to target one of the D4 GDI signaling pathway genes,
-and the first two columns \code{miRNA} and \code{Target Gene}
-respectively provide the miRNA identifier
-(\code{"hsa-mir-421"}) and the corresponding
-predicted gene target (\code{"hsa-mir-421"}).}
+\code{'clinical'} is of dimension 144 x 55 and contains clinical
+variables for the 144 individuals. \code{'rnaseq'}, \code{'methyl'},
+ \code{'cna'}, and \code{'mirna'} are of dimension 13 (genes) or 1 (miRNAs) 
+ x 144 (samples), where the row names contain the gene symbol or miRNA name.
+}
 \source{
 \href{https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga}{TCGA}
 }
@@ -26,7 +21,7 @@ predicted gene target (\code{"hsa-mir-421"}).}
 data(LUAD_subset)
 }
 \description{
-Multi-omic (RNA-seq, copy number alterations, methylation, and
+List of multi-omic (RNA-seq, copy number alterations, methylation, and
 miRNA-seq) and phenotypic data in 144 individuals in the TCGA-LUAD
 data for the 13 genes in the D4-GDI signaling pathway.
 }
