@@ -4,11 +4,13 @@
 \name{mirtarbase}
 \alias{mirtarbase}
 \title{Curated miR-target interaction predictions from miRTarBase}
-\format{An object of class \code{data.frame} with two
+\format{
+An object of class \code{data.frame} with two
 columns: \code{miRNA}, which provides the miRNA identifier
-(e.g., \code{"hsa-miR-20a-5p"}) and
+(e.g., \code{'hsa-miR-20a-5p'}) and
 \code{Target Gene}, which provides the corresponding
-predicted gene target.}
+predicted gene target.
+}
 \source{
 \url{http://mirtarbase.mbc.nctu.edu.tw/php/index.php}
 }
@@ -16,16 +18,16 @@ predicted gene target.}
 data(mirtarbase)
 }
 \description{
-List of 10,754 predicted miRNA gene targets from miRTarBase
+Data.frame of 10,754 predicted miRNA gene targets from miRTarBase
 (version 7.0), filtered to include only predictions with the
-"Functional MTI" support type.
+'Functional MTI' support type.
 }
 \examples{
 data(mirtarbase)
 head(mirtarbase)
 }
 \references{
-Chou et al. (2018) Nucleic Acids Research 46, D296–D302.
+Chou et al. (2018) Nucleic Acids Research 46, D296-D302.
 \url{https://doi.org/10.1093/nar/gkx1067}.
 }
 \keyword{datasets}
