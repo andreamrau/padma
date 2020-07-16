@@ -4,7 +4,19 @@
 
 [![DOI](https://zenodo.org/badge/177859198.svg)](https://zenodo.org/badge/latestdoi/177859198)
 
-The *padma* package can be installed as follows:
+The *padma* package can be installed from Bioconductor (devel) 
+using the *BiocManager* package:
+
+
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+# The following initializes usage of Bioc devel
+BiocManager::install(version='devel')
+BiocManager::install("padma")
+```
+
+Note that the package can also be installed directly from GitHub:
 
 ```
 library(devtools)
@@ -17,4 +29,4 @@ library(padma)
 
 ### Reference
 
-Rau et al. (2019) Individualized multi-omic pathway deviation scores using multiple factor analysis. bioRxiv, doi: https://doi.org/10.1101/827022.
+Rau et al. (2020) Individualized multi-omic pathway deviation scores using multiple factor analysis. Biostatistics (accepted), doi: https://doi.org/10.1101/827022.
