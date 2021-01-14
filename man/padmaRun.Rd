@@ -92,8 +92,10 @@ run_padma <-
 summary(run_padma)
 
 ## padma plots
+\dontrun{
 factorMap(run_padma, dim_x = 1, dim_y = 2)
 factorMap(run_padma, dim_x = 1, dim_y = 2,
            partial_id = "TCGA-78-7536")
 omicsContrib(run_padma, max_dim = 10)
+}
 }
