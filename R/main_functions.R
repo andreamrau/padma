@@ -126,9 +126,12 @@ stop("Please load KEGGREST to automatically search for KEGG pathway gene IDs.")
                 ids_tmp <- unique(
                     gene_map_subset[which(gene_map_subset[, 1] %in% 
                   ids), , drop = FALSE])
-                experiments(base_data)[[j]] <- 
-                    experiments(base_data)[[j]][match(ids_tmp[, 
-                  1], rownames(experiments(base_data)[[j]])), ]
+                exp_tmp <- matrix(
+                  experiments(base_data)[[j]][match(ids_tmp[,1], 
+                       rownames(experiments(base_data)[[j]])), ],
+                  ncol = ncol(experiments(base_data)[[j]]))
+                colnames(exp_tmp) <- colnames(experiments(base_data)[[j]])
+                experiments(base_data)[[j]] <- exp_tmp
                 rownames(experiments(base_data)[[j]]) <- paste0(ids_tmp[, 1], 
                   "_", ids_tmp[, 2])
             }
@@ -228,7 +231,7 @@ stop("Please load KEGGREST to automatically search for KEGG pathway gene IDs.")
             }
             ## Fill in remaining all NA's in supp with 0's
             supp0_index <- which(rowSums(is.na(supp_data[[j]])) == nc_supp)
-            if (length(supp0_index)) {
+            if (length(supp0_index) & nc_supp > 0) {
                 supp_data[[j]][supp0_index, ] <- 0
             }
         }

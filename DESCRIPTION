@@ -1,7 +1,7 @@
 Package: padma
 Type: Package
 Title: Individualized Multi-Omic Pathway Deviation Scores Using Multiple Factor Analysis
-Version: 1.3.0
+Version: 1.3.1
 Authors@R: c(
   person(given="Andrea", 
          family="Rau", 
@@ -25,7 +25,7 @@ Authors@R: c(
          email="pauer@uwm.edu",
          role="aut"))
 Depends: 
-  R (>= 4.0.0), 
+  R (>= 4.1.0), 
   SummarizedExperiment, 
   S4Vectors
 Imports: 
@@ -66,6 +66,6 @@ biocViews:
   BioCarta,
   MethylSeq
 Encoding: UTF-8
-LazyData: true
+LazyData: TRUE
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr

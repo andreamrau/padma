@@ -25,10 +25,10 @@ using the quantiles of the calculated multi-omic pathway deviation scores.
 LUAD_subset <- padma::LUAD_subset
 ## Create MultiAssayExperiment object with LUAD data
 omics_data <- 
-  list(rnaseq = LUAD_subset$rnaseq,
-       methyl = LUAD_subset$methyl,
-       mirna = LUAD_subset$mirna,
-       cna = LUAD_subset$cna)
+  list(rnaseq = as.matrix(LUAD_subset$rnaseq),
+       methyl = as.matrix(LUAD_subset$methyl),
+       mirna = as.matrix(LUAD_subset$mirna),
+       cna = as.matrix(LUAD_subset$cna))
 pheno_data <- 
   data.frame(LUAD_subset$clinical, 
              row.names = LUAD_subset$clinical$bcr_patient_barcode)

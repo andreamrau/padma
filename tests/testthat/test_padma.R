@@ -1,9 +1,9 @@
 LUAD_subset <- padma::LUAD_subset
 omics_data <- 
-  list(rnaseq = LUAD_subset$rnaseq,
-       methyl = LUAD_subset$methyl,
-       mirna = LUAD_subset$mirna,
-       cna = LUAD_subset$cna)
+  list(rnaseq = as.matrix(LUAD_subset$rnaseq),
+       methyl = as.matrix(LUAD_subset$methyl),
+       mirna = as.matrix(LUAD_subset$mirna),
+       cna = as.matrix(LUAD_subset$cna))
 pheno_data <- 
   data.frame(LUAD_subset$clinical, 
              row.names = LUAD_subset$clinical$bcr_patient_barcode)
@@ -62,3 +62,4 @@ test_that("Function returns padmaResults object", {
                c("eig", "ind_contrib_MFA_summary", 
                  "gene_contrib_MFA_summary", "omics_contrib_MFA_summary"))
 })
+

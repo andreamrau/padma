@@ -40,7 +40,7 @@ padma(object, ...)
 \arguments{
 \item{object}{Matched multi-omic data. May be provided as (1) a 
 \code{MultiAssayExperiment} or (2) a named \code{list}, with each
-element corresponding to a \code{data.frame} representing an omic, with 
+element corresponding to a \code{matrix} representing an omic, with 
 biological entities in rows. Row names should include unique biological 
 entity IDs (e.g., gene symbols, miRNA names); columns represent 
 individuals. If more than one biological entity is used, a 
@@ -108,10 +108,10 @@ class \code{padmaResults}.
 LUAD_subset <- padma::LUAD_subset
 ## Create MultiAssayExperiment object with LUAD data
 omics_data <- 
-  list(rnaseq = LUAD_subset$rnaseq,
-       methyl = LUAD_subset$methyl,
-       mirna = LUAD_subset$mirna,
-       cna = LUAD_subset$cna)
+  list(rnaseq = as.matrix(LUAD_subset$rnaseq),
+       methyl = as.matrix(LUAD_subset$methyl),
+       mirna = as.matrix(LUAD_subset$mirna),
+       cna = as.matrix(LUAD_subset$cna))
 pheno_data <- 
   data.frame(LUAD_subset$clinical, 
              row.names = LUAD_subset$clinical$bcr_patient_barcode)

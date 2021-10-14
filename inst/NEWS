@@ -1,3 +1,6 @@
+Changes in version 1.3.x (2021-10-14)
++ Minor bug change for lists of data.frame vs matrix for ExperimentList
+
 Changes in version 0.99.x (2018-05-15)
 + Substantial changes to prepare for Bioconductor submission
   o added S4 classes / methods / generics

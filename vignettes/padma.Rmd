@@ -62,7 +62,7 @@ library(padma)
 ```
 
 Multi-omic data must be formatted as either a `MultiAssayExperiment` object 
-(preferred) or as a named list of `data.frames` of matched
+(preferred) or as a named list of `matrix` objects of matched
 multi-omic data from a set of individuals, which is internally converted into 
 a `MultiAssayExperiment` object. A small example dataset in list
 format is provided in `LUAD_subset` for multi-omic data (clinical, RNA-seq, 
@@ -335,13 +335,14 @@ library(MultiAssayExperiment)
 
 LUAD_subset <- padma::LUAD_subset
 omics_data <- 
-  list(rnaseq = LUAD_subset$rnaseq,
-       methyl = LUAD_subset$methyl,
-       mirna = LUAD_subset$mirna,
-       cna = LUAD_subset$cna)
+  list(rnaseq = as.matrix(LUAD_subset$rnaseq),
+       methyl = as.matrix(LUAD_subset$methyl),
+       mirna = as.matrix(LUAD_subset$mirna),
+       cna = as.matrix(LUAD_subset$cna))
 pheno_data <- 
   data.frame(LUAD_subset$clinical, 
              row.names = LUAD_subset$clinical$bcr_patient_barcode)
+
 mae <-
   suppressMessages(
     MultiAssayExperiment::MultiAssayExperiment(
@@ -358,7 +359,7 @@ run_padma <-
   padma(mae, pathway_name = D4GDI, verbose = FALSE)
 ```
 
-Alternatively, *padma* could be run directly on the list of data.frames
+Alternatively, *padma* could be run directly on the list of matrices
 contained in `LUAD_subset` (ensuring that the clinical data are included
 as `colData`):
 
@@ -367,8 +368,8 @@ clinical_data <- data.frame(LUAD_subset$clinical)
 rownames(clinical_data) <- clinical_data$bcr_patient_barcode
 
 run_padma_list <- 
-  padma(LUAD_subset[-which(names(LUAD_subset) == "clinical")],
-        colata = clinical_data,
+  padma(omics_data,
+        colData = clinical_data,
         pathway_name = D4GDI,
         verbose = FALSE)
 ```
@@ -638,3 +639,10 @@ correlated with a batch effect)
 omics) across all MFA components
 - Add in a full working example using 
 [*curatedTCGAData*](https://bioconductor.org/packages/curatedTCGAData/).
+
+# Session Info
+
+```{r}
+sessionInfo()
+```
+

@@ -10,7 +10,7 @@
 #' @inheritParams padmaRun
 #' @param object Matched multi-omic data. May be provided as (1) a 
 #' \code{MultiAssayExperiment} or (2) a named \code{list}, with each
-#' element corresponding to a \code{data.frame} representing an omic, with 
+#' element corresponding to a \code{matrix} representing an omic, with 
 #' biological entities in rows. Row names should include unique biological 
 #' entity IDs (e.g., gene symbols, miRNA names); columns represent 
 #' individuals. If more than one biological entity is used, a 
