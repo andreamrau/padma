@@ -1,7 +1,7 @@
 Package: padma
 Type: Package
 Title: Individualized Multi-Omic Pathway Deviation Scores Using Multiple Factor Analysis
-Version: 1.4.0
+Version: 1.5.0
 Authors@R: c(
   person(given="Andrea", 
          family="Rau", 
