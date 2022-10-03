@@ -140,8 +140,11 @@ stop("Please load KEGGREST to automatically search for KEGG pathway gene IDs.")
     
     ## Only keep samples that are represented by all assays
     base_data <- suppressMessages(intersectColumns(base_data))
-    supp_data <- suppressMessages(intersectColumns(supp_data))
-    
+    ## OCt 3, 2022 fix: intersectColumns does not work for empty mae
+    if(max(unlist(lapply(assays(supp_data), ncol))) > 0) {
+      supp_data <- suppressMessages(intersectColumns(supp_data))
+    }
+
     ## Return empty results if no genes
     if(max(unlist(lapply(experiments(base_data), nrow))) == 0) {
       message("No matching genes found.")
